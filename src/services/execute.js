@@ -13,9 +13,9 @@ const getFaceImage = (grayImg) => {
 };
 
 //readData.js
-const basePath = "../images";
+const basePath = "src/images2";
 const imgsPath = path.resolve(basePath);
-const nameMappings = ["download"];
+const nameMappings = ['daryl', 'rick', 'negan'];
 
 const imgFiles = fs.readdirSync(imgsPath);
 
@@ -59,8 +59,8 @@ const runPrediction = (recognizer) => {
 			nameMappings[result.label],
 			result.confidence
 		);
-		cv.imshowWait("face", img);
-		cv.destroyAllWindows();
+		//cv.imshowWait("face", img);
+		// cv.destroyAllWindows();
 	});
 };
 
